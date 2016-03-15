@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
+    "lcd": "^1.1.2",
     "onoff": "^1.0.4",
     "pigpio": "^0.3.2",
     "r-pi-usonic": "^2.5.0",
