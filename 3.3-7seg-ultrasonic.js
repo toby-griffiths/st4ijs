@@ -1,5 +1,5 @@
 
-var LedControl = require("../rpi-led-control"); 
+var LedControl = require("rpi-led-control"); 
 var usonic = require('r-pi-usonic');
 
 var sensor;
