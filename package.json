@@ -1,0 +1,26 @@
+{
+  "name": "st4i-examples",
+  "version": "0.0.1",
+  "description": "Example files for the ST4i workshop from Seb Lee-Delisle st4i.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seb Lee-Delisle",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "onoff": "^1.0.4",
+    "pigpio": "^0.3.2",
+    "r-pi-usonic": "^2.5.0",
+    "request": "^2.69.0",
+    "rpi-led-control": "^0.1.2",
+    "rpi-ws281x-native": "^0.8.1",
+    "socket.io": "^1.4.5",
+    "thingspeakclient": "^0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebleedelisle/st4ijs"
+  }
+}
