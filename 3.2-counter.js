@@ -1,5 +1,5 @@
 
-var LedControl = require("../rpi-led-control"); 
+var LedControl = require("rpi-led-control"); 
 
 
 var display = new LedControl(13,5, 6);
