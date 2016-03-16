@@ -11,6 +11,8 @@
   "dependencies": {
     "express": "^4.13.4",
     "lcd": "^1.1.2",
+    "oled-font-5x7": "^1.0.0",
+    "oled-js-pi": "git+https://github.com/sebleedelisle/oled-js-pi.git",
     "onoff": "^1.0.4",
     "pigpio": "^0.3.2",
     "r-pi-usonic": "^2.5.0",

@@ -31,13 +31,9 @@ var latLong = "50.82747,-0.1509067"; // Brighton
 var url = "https://api.forecast.io/forecast/"+apiKey+"/"+latLong; //+body.latitude+","+body.longitude;
 
 oled.clearDisplay(false); 
-oled.dimDisplay(true);
 oled.setCursor(1, 1);
 oled.writeString(font, 1, 'Loading...', 1, true);
 
-var dimmed = false; 
-
-setInterval(function(){oled.dimDisplay(dimmed); dimmed=!dimmed;}, 500); 
 
 request({
     url: url,
