@@ -1,4 +1,4 @@
-var socket = require('socket.io-client')('http://sebsmac.local:8101'); //TODO change to node.seb.ly
+var socket = require('socket.io/node_modules/socket.io-client')('http://node.seb.ly:8101');
 
 
 var Gpio = require('pigpio').Gpio,

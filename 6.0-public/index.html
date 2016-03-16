@@ -3,26 +3,32 @@
   <head>
 	<title>LED Controller</title>
 	<script src="socket.io/socket.io.js"></script>
-
+	<style>
+	#outputText {
+		display : block; 
+		background : white; 
+		border : 2px black solid;
+		border-radius : 8px;  
+		width : 300px; 
+		height : 100px; 
+	} 
+	</style>
   </head>
   <body>
-	<input type="button" id= "inputButton" value="off" onmousedown="mouseDown()" onmouseup="mouseUp()" />
 	
-	<br><br><span id="outputText">50</span>
+	<span id="outputText" onmousedown="mouseDown()" onmouseup="mouseUp()"> </span>
 	
 	<script type="text/javascript">
 		var socket = io.connect();
 		
 		socket.on('led', function (data) {
-			document.getElementById("outputText").innerHTML = (data.value)?'on':'off';
+			document.getElementById("outputText").style.background = (data.value)?'red':'white';
 		});
 		
 		function mouseDown(){	
-			document.getElementById("inputButton").value ="on";
 			socket.emit('led', { value: true });
 		}
 		function mouseUp(){
-			document.getElementById("inputButton").value ="off";
 			socket.emit('led', { value: false });
 		}
 	</script>

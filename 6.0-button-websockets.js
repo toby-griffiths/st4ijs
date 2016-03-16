@@ -13,7 +13,7 @@ var Gpio = require('pigpio').Gpio,
 	}); 
 
 
-server.listen(8080); //start the webserver on port 8080
+server.listen(8101); //start the webserver on port 8101
 app.use(express.static('6.0-public')); //tell the server that ./public/ contains the static webpages
 
 var ledOn = false; 
