@@ -1,12 +1,25 @@
+// IP Flash
+// used to identify the last part of the Raspberry Pi's IP address. 
+// It finds the IP address, and then flashes the LED the number of
+// times of that last digit. So if the IP address is 192.168.1.10
+// the LED will flash 10 times. 
+
 "use strict";
 
-var Gpio = require('onoff').Gpio, // Constructor function for Gpio objects.
-  led = new Gpio(21, 'out');         // Export GPIO #14 as an output.
+//import the onoff library, and extract the Gpio object constructor
+var Gpio = require('onoff').Gpio;
 
-
+// import the 'os' library - we need this to get the ip address
 var os = require('os');
+
+// make a new Gpio object for pin 21 as an output
+var led = new Gpio(21, 'out');      
+
+// now get the network interfaces
 var ifaces = os.networkInterfaces();
+// an array to store the ip numbers in
 var ipNumbers = []; 
+// the number of times to flash the ip address
 var flashCount = 5; 
 
 Object.keys(ifaces).forEach(function (ifname) {
