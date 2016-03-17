@@ -1,7 +1,7 @@
 var request = require("request");
 var LedControl = require("rpi-led-control"); 
 
-var lc = new LedControl(13,5, 6); 
+var lc = new LedControl(11,10,9);
 
 var updateInterval, nextPassTime, timeOffset; 
 lc.setBrightness(0,15);

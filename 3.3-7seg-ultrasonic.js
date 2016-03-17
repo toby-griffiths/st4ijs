@@ -8,7 +8,7 @@ var echoPin = 24,
 	triggerPin = 23;
 
 
-var display = new LedControl(13,5, 6);
+var display = new LedControl(11,10,9);
 display.setBrightness(0,15);
 
 var  startTime = Date.now();
@@ -22,8 +22,6 @@ usonic.init(function (error) {
 		setInterval(loop, 50);
     }
 });
-
-
 
 function loop() { 
 	var distance = sensor(); 
