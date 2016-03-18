@@ -18,10 +18,10 @@ process.on('SIGINT', function () {
 var offset = 0;
 setInterval(function () {
 	for (var i = 0; i < NUM_LEDS; i++) {
-		var colour = Colour().hsl((offset + i), 100, 50).rgb(); 
+		var colour = Colour().hsl((offset + (i*10))%360, 100, 80).rgb(); 
 		pixelData[i] = rgb2Int(colour)
 	}
-	offset++;
+	offset+=5;
 	ws281x.render(pixelData);
 }, 1000 / 30);
 
