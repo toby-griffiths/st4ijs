@@ -20,7 +20,6 @@ setInterval(function () {
 	for (var i = 0; i < NUM_LEDS; i++) {
 		var colour = Colour().hsl((offset + i), 100, 50).rgb(); 
 		pixelData[i] = rgb2Int(colour)
-		if(i==0) console.log(colour); 
 	}
 	offset++;
 	ws281x.render(pixelData);
@@ -29,6 +28,6 @@ setInterval(function () {
 console.log('Press <ctrl>+C to exit.');
 
 function rgb2Int(col) {
-	var r = col[0], g=col[1], b=col[2]; 
-	return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
+	with (col) 
+		return ((r & 0xff) << 16) + ((g & 0xff) << 8) + (b & 0xff);
 }
