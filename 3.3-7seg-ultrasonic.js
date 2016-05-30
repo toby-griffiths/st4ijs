@@ -11,15 +11,15 @@ var echoPin = 24,
 var display = new LedControl(11,10,9);
 display.setBrightness(0,15);
 
-var  startTime = Date.now();
+var startTime = Date.now();
 
 
 usonic.init(function (error) {
-    if (error) {
-        console.log(error);
-    } else {
-	 	sensor = usonic.createSensor(echoPin, triggerPin, 750); // last parameter is timeout
-		setInterval(loop, 50);
+	if (error) {
+		console.log(error);
+	} else {
+	sensor = usonic.createSensor(echoPin, triggerPin, 750); // last parameter is timeout
+	setInterval(loop, 50);
     }
 });
 
