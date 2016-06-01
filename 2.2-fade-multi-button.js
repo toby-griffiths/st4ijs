@@ -2,7 +2,7 @@ var Gpio = require('pigpio').Gpio;
 
 // this is how pigpio does inputs. You can optionally add a call back to when it 
 // changes, but we're not doing that here. 
-var button = new Gpio(15, { mode: Gpio.INPUT });
+var button = new Gpio(23, { mode: Gpio.INPUT });
  
 // change these to match your LED GPIO pins : 
 var ledPins = [21,20,16,12,26,19,13,6,5]; 

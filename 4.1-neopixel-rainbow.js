@@ -18,7 +18,7 @@ process.on('SIGINT', function () {
 var offset = 0;
 setInterval(function () {
 	for (var i = 0; i < NUM_LEDS; i++) {
-		var colour = Colour().hsl((offset + (i*10))%360, 100, 80).rgb(); 
+		var colour = Colour().hsl((offset + (i*10))%360, 100, 20).rgb(); 
 		pixelData[i] = rgb2Int(colour)
 	}
 	offset+=5;

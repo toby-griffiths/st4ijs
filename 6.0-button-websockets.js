@@ -6,7 +6,7 @@ io = require('socket.io').listen(server);	//web socket server
 
 var Gpio = require('pigpio').Gpio,
 	led = new Gpio(21, {mode: Gpio.OUTPUT}),
-	button = new Gpio(15, {
+	button = new Gpio(23, {
 		mode: Gpio.INPUT,
 		pullUpDown: Gpio.PUD_DOWN,
 		edge: Gpio.EITHER_EDGE

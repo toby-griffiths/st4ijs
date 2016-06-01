@@ -2,7 +2,7 @@ var socket = require('socket.io/node_modules/socket.io-client')('http://node.seb
 
 var Gpio = require('pigpio').Gpio,
 	led = new Gpio(21, {mode: Gpio.OUTPUT}),
-	button = new Gpio(15, {
+	button = new Gpio(23, {
 		mode: Gpio.INPUT,
 		pullUpDown: Gpio.PUD_DOWN,
 		edge: Gpio.EITHER_EDGE
