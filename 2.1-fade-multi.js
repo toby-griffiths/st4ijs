@@ -12,7 +12,7 @@ for (var i = 0; i<ledPins.length; i++) {
 }
  
 // get a loop running 60 times a second (1000/60 = 16.6)
-setInterval(loop, 16); 
+var interval = setInterval(loop, 16);
  
 function loop() { 
  
@@ -32,3 +32,12 @@ function loop() {
 	}	
  
 }
+
+function exit() {
+	clearInterval(interval);
+	for (var i = 0; i<leds.length; i++) {
+		leds[i].pwmWrite(0);
+	}
+}
+
+process.on('SIGINT', exit);
