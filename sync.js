@@ -1,3 +1,8 @@
+/**
+ * To use, run `nodemon sync.js <path to mounted pi drive folder>`
+ */
+
+
 var Rsync = require('rsync');
 var colors = require('colors');
 
